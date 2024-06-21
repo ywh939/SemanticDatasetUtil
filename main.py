@@ -15,6 +15,7 @@ def parse_config():
     parser.add_argument('--kitti_label_path', type=str, default="", help='the path of kitti label file')
     parser.add_argument('--vis_predict', action='store_true', default=False, help='whether to visualize predict results')
     parser.add_argument('--vis_truth', action='store_true', default=False, help='whether to visualize truth results')
+    parser.add_argument('--vis_test', action='store_true', default=False, help='whether to visualize test results')
     parser.add_argument('--vis_class', nargs='*', help='visualize which class', required=True)
     parser.add_argument('--vis_predict_label', nargs='*', default=[], help='visualize which predicted label')
 
@@ -39,7 +40,7 @@ def main():
     # semanticManager.normalize_pcd_format_from_editor()
     semanticManager.process_truth_label()
     semanticManager.process_predict_label()
-    # semanticManager.process_predict_label_wo_truth()
+    semanticManager.process_predict_label_wo_truth()
 
 if __name__=='__main__':
     main()

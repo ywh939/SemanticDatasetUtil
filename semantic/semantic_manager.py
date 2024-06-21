@@ -75,6 +75,9 @@ class SemanticManager(object):
             open3d_manager.visualize_commont_point_cloud(pcd2)
 
     def process_truth_label(self):
+        if self.args.vis_truth is False:
+            return
+        
         self.logger.info(f'start process {self.semanticDataset.kitti_label_path}')
 
         file_list = os.listdir(self.semanticDataset.kitti_label_path)
@@ -90,6 +93,9 @@ class SemanticManager(object):
             self.visualize_truth_labeled_pcd(truth_label, file_path)
 
     def process_predict_label(self):
+        if self.args.vis_predict is False:
+            return
+        
         self.logger.info(f'start process {self.semanticDataset.kitti_label_path}')
 
         file_list = os.listdir(self.semanticDataset.kitti_label_path)
@@ -116,6 +122,9 @@ class SemanticManager(object):
             self.visualize_labeled_pcd(predict_label, truth_label, file_path)
 
     def process_predict_label_wo_truth(self):
+        if self.args.vis_test is False:
+            return
+        
         self.logger.info(f'start process {self.semanticDataset.kitti_label_path}')
 
         file_list = os.listdir(self.semanticDataset.kitti_label_path)
@@ -183,7 +192,7 @@ class SemanticManager(object):
         open3d_manager.visualize_labeled_pcd(pcd, colors)
 
     def visualize_labeled_pcd_wo_truth(self, predict_label, label_file_path):
-        if self.args.vis_predict is False:
+        if self.args.vis_test is False:
             return
         
         vis_label = predict_label

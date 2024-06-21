@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${fileDirname}",
+            "args": [
+                // "--save_log",
+                "--vis_predict",
+                // "--vis_truth",
+                // "--vis_test",
+                "--vis_class",
+                "truck", "liaodui", "ground",
+                // "--vis_predict_label",
+                // "pole",
+                // "truck",
+                // "liaodui",
+                // "ground",
+                "--raw_label_path",
+                "D:\\semantic-seg\\kuangka\\new_kuangka_label\\pcdPcd",
+                "--kitti_label_path",
+                "D:\\semantic-seg\\kuangka\\kitti_format",
+                // "D:\\semantic-seg\\kuangka\\test_kuangka_pcd",
+                // "D:\\semantic-seg\\kuangka\\direct-train-sphere-output",
+                // "D:\\semantic-seg\\kuangka\\raw-sphere-examples",
+                // "D:\\semantic-seg\\kuangka\\direct-train-sphere-examples",
+                "--raw_pcd_path",
+                "D:\\semantic-seg\\kuangka\\test_kuangka_pcd",
+            ]
+        }
+    ]
+}
