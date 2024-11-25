@@ -10,7 +10,7 @@ conda install --yes --file requirement.txt
 ```
 ## Datasets Preparation
 
-Download the Demo dataset from [here](https://pan.baidu.com/s/19Cx-d40LcFbqI0_NX3k6GQ). Unzip and set the path to config file. 
+Download the Demo dataset from [here](https://pan.baidu.com/s/16Sjra5_u_Tc98OmmC0wlHQ). Unzip and set the path to config file. 
 
 ## Play
 

@@ -112,6 +112,6 @@ custom_class_map:
   "ground": 28
 custom_class_learning_map:
   0: 0
-  8: 4
-  16: 18
-  28: 10
+  8: 1
+  16: 2
+  28: 3
